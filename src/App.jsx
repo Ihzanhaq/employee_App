@@ -36,11 +36,15 @@ function App() {
   }, [data]);
 
   const getData = async () => {
-    let apiResponse = await getEmployee();
-    console.log(apiResponse);
-    if (apiResponse.status == 200) {
-      setData(apiResponse.data);
-    } else {
+    try {
+      let apiResponse = await getEmployee();
+      console.log(apiResponse);
+      if (apiResponse.status == 200) {
+        setData(apiResponse.data);
+      } else {
+        alert("Error Fetching Data");
+      }
+    } catch (error) {
       alert("Error Fetching Data");
     }
   };
