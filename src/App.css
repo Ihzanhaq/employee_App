@@ -1,0 +1,18 @@
+.glass-card {
+  /* From https://css.glass */
+  background: rgba(4, 21, 87, 0.612);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  border: 1px solid rgba(253, 253, 253, 0.24);
+}
+
+.hover {
+  transition: 0.3s ease;
+}
+.hover:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
