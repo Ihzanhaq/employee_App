@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import {
   deleteEmployee,
   editEmployee,
-  getBudget,
   getEmployee,
   postEmployee,
 } from "./services/allApi";
@@ -18,7 +17,7 @@ function App() {
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
-  const [attendance, setAttendance] = useState("");
+  const [attendance, setAttendance] = useState("Set Attendance");
   const [editData, setEditData] = useState({});
   const [editMode, setEditMode] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -38,7 +37,7 @@ function App() {
   const getData = async () => {
     try {
       let apiResponse = await getEmployee();
-      console.log(apiResponse);
+    
       if (apiResponse.status == 200) {
         setData(apiResponse.data);
       } else {

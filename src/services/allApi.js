@@ -1,6 +1,6 @@
 import axiosConfig from "./axiosConfig";
 
-const apiUrl = "https://employee-backend-5fes.onrender.com/";
+const apiUrl = "https://employee-backend-5fes.onrender.com/employee/";
 
 export const getEmployee = async () => {
   return await axiosConfig("get", apiUrl, "");
@@ -17,4 +17,3 @@ export const deleteEmployee = async (id) => {
 export const editEmployee = async (id, reqBody) => {
   return await axiosConfig("patch", apiUrl + id, reqBody);
 };
-
